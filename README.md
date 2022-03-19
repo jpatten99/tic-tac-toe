@@ -1,11 +1,6 @@
 # tic-tac-toe
 command line tic-tac-toe created with ruby
-######################################################
-to make a move, enter coordinates 
-where x and y are 1, 2, or 3
-
-
-
+to make a move, enter a coordinate pair
 
 
 [1 1]          [2 1]       [3 1]  
