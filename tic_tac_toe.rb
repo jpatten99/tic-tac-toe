@@ -6,6 +6,16 @@ class Tic_Tac_Toe
     @turn_counter = 0
     @game_not_over = true
   end
+  def is_board_full?
+    for i in 0..2 do
+      for j in 0..2 do
+        if @board[i][j] == "-"
+          return false
+        end
+      end
+    end
+    return true
+  end
   
   def input_valid?(input1, input2)
     if (input1 > 3 || input1 < 1) || (input2 > 3 || input2 < 1)
@@ -65,6 +75,10 @@ class Tic_Tac_Toe
 
   def play_game
     while @game_not_over
+      if(is_board_full?)
+        puts "\nDRAW"
+        exit(true)
+      end
       print_board
       coor1, coor2 = gets.split.map(&:to_i)
       if coor1 != nil && coor2 != nil
